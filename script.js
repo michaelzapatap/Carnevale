@@ -52,24 +52,7 @@ $(document).ready(function(){
         });
         
     });
-    
-    // $(window).scroll(function(){
-    //     scroll = $(window).scrollTop();  
 
-    //     if(scroll > 200){
-    //         if(!flag){
-    //             $('#logo').css({"margin-top":"-5px","width":"150px","height":"auto"});
-    //             $('header').css({"background-color": "transparent", "border":"blue"});
-    //             flag = true;
-    //         }
-    //     } else {
-    //         if(flag){
-    //             $('#logo').css({"margin-top":"150px","width":"300px","height":"auto"});
-    //             $('header').css({"background-color": "transparent"});            
-    //             flag = false;
-    //         }
-    //     }
-    // });
 });
 const button = document.querySelector('button');
 const menu = document.querySelector('.menu');
@@ -115,32 +98,52 @@ function closeAnotherButtons(activeButton) {
 * Add event listener to the "Sign Up" button
 */
 signupButton.addEventListener('click', () => {
-userForms.classList.remove('bounceRight')
-userForms.classList.add('bounceLeft')
+    userForms.classList.remove('bounceRight')
+    userForms.classList.add('bounceLeft')
 }, false)
 
 /**
 * Add event listener to the "Login" button
 */
 loginButton.addEventListener('click', () => {
-userForms.classList.remove('bounceLeft')
-userForms.classList.add('bounceRight')
+    userForms.classList.remove('bounceLeft')
+    userForms.classList.add('bounceRight')
 }, false) 
 
 // home
+var slideCount = getElementById("carouselExampleIndicators").length();
+var slideWidth = getElementById("carouselExampleIndicators").width();
+var slideHeight = getElementById("carouselExampleIndicators").height();
+var sliderUlWidth = slideCount * slideWidth;
+var inner = getElementsByClassName("carousel-inner");
+var innerLC = inner[inner.length -1]
+var buttonAnt = getElementsByTagName("carousel-control-ant")
+
+function moveLeft() {
+    console.log(inner.length)
+    inner.animate({
+        left: + slideWidth
+    }, 200, function () {
+        innerLC.prepend(inner);
+        inner.css('left', '');
+    });
+};
+buttonAnt.addEventListener(click, function () {
+    moveLeft();
+});
 
 jQuery(document).ready(function ($) {
 
-    /*setInterval(function () {
+    setInterval(function () {
         moveRight();
-    }, 3000);*/
+    }, 3000);
   
-	var slideCount = $('.carousel').length;
-	var slideWidth = $('.carousel').width();
-	var slideHeight = $('.carousel').height();
+	var slideCount = $('#carouselExampleIndicators').length;
+	var slideWidth = $('#carouselExampleIndicators').width();
+	var slideHeight = $('#carouselExampleIndicators').height();
 	var sliderUlWidth = slideCount * slideWidth;
 	
-	$('.carousel').css({ width: slideWidth, height: slideHeight });
+	$('#carouselExampleIndicators').css({ width: slideWidth, height: slideHeight });
 	
 	$('.carousel-inner').css({ width: sliderUlWidth, marginLeft: - slideWidth });
 	
