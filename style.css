@@ -291,7 +291,17 @@ form p {
     bottom: 0;
     transform: scale(0.5, 0.3) translate(-50%);
   }
+  .lineainst::before {  
+    color: rgb(21, 8, 51);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: scale(0.5, 0.3) translate(-50%);
+  }
   .contact{
+    color:rgb(27, 31, 85)
+  }
+  .lineainst{
     color:rgb(27, 31, 85)
   }
   .menu__button--arrow:hover::before {
@@ -671,6 +681,12 @@ form p {
   .contact-box {
     width: 95%;
     margin: 8% 5%;
+  }
+  .lineainst-box {
+    width: clamp(100px, 90%, 1000px);
+    margin: 80px 50px;
+    display: flex;
+    flex-wrap: wrap;
   }
   act-box {
     width: 95%;
@@ -1384,8 +1400,37 @@ footer .bottom_content section {
   width: 50%;
   padding: 8% 5% 10% 5%;
 }
+.lineainst-links,
+.lineainst-form-wrapper {
+  width: 100%;
+  padding: 5% 5% 5% 5%;
+}
+.lineainst-links {
+  background-color: #2e415c;
+  color: #edf2fc;
+  text-align: center;
+  /* background:
+      radial-gradient(
+        circle at 55% 92%, #426691 0 12%, transparent 12.2%
+      ), 
+      radial-gradient(
+        circle at 94% 72%, #426691 0 10%, transparent 10.2%
+      ), 
+      radial-gradient(
+        circle at 20% max(78%, 350px), #263a53 0 7%, transparent 7.2%
+      ), 
+      radial-gradient(
+        circle at 0% 0%, #263a53 0 40%, transparent 40.2%
+      ), 
+      #1f2e43;
+    border-radius: 10px 0 0 10px; */
+}
 
 .contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
+}
+.lineainst-form-wrapper {
   background-color: #ffffff8f;
   border-radius: 0 10px 10px 0;
 }
@@ -1403,6 +1448,19 @@ footer .bottom_content section {
   .contact-form-wrapper {
     border-radius: 0 0 10px 10px;
   }
+
+  .lineainst-links,
+  .lineainst-form-wrapper {
+    width: 100%;
+  }
+
+  .lineainst-links {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .lineainst-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1410,8 +1468,20 @@ footer .bottom_content section {
     width: 95%;
     margin: 8% 5%;
   }
+  .lineainst-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
 }
 h2#contacto {
+  font-family: "Arimo", sans-serif;
+  color: #fff;
+  font-size: clamp(30px, 6vw, 60px);
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(0.95, 1);
+}
+h2#lineainst {
   font-family: "Arimo", sans-serif;
   color: #fff;
   font-size: clamp(30px, 6vw, 60px);
@@ -1685,4 +1755,34 @@ a.carousel-control-next {
   margin: 10px auto;
   width: 160px;
   font-size: 18px;
+}
+
+#info {
+  background: white;
+  color: rgb(24, 76, 110);
+  text-align: center; 
+  padding: 20px;
+}
+
+#info .contenedor{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info_cars{
+  margin: 20px;
+}
+
+.info_cars img{
+  width: 180px;
+  height: 220px;
+  border-radius: 50%;
+  border: 7px solid;
+}
+
+.info_cars img:hover{
+  border: 8px solid;
+  /*darle sombreado al borde*/
+  box-shadow: 10px 10px black;
 }
