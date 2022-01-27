@@ -1,69 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="registro-compilado.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Registro</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="registro.scss">
+  <link rel="stylesheet" href="registro-compilado.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <title>Carnevale</title>
 </head>
-<body>
-  <header>
-    <nav class="principal">
-      <button id="menu-icon"><img src="images/menu.png" style="width: 2rem"></button>
-      <nav>
-        <ul class="menu menu--background">
-          <li><a href="index.html"><img src="./images/carnevaleLogo.jpg" id="logo"></a></li>
-          <li class="menu__button inicio"><a href="index.html">Home</a></li>
-          <li class="menu__button menu__button--arrow">Nuestros Productos
-            <div class="dropdown-container">
-              <ul>
-                <li><a href="#">L&iacute;nea Institucional</a></li>
-                <li><a href="#">Seguridad Industrial</a></li>
-                <li><a href="#">Ferreter&iacute;a</a></li>                        
-                <li><a href="#">Servicios Carnevale</a></li>                        
-              </ul>
-            </div>
-          </li>
-          <li class="menu__button menu__button--arrow">Nosotros
-            <div class="dropdown-container">
-              <ul>
-                <li><a href="#">Misi&oacute;n</a></li>
-                <li><a href="#">Visi&oacute;n</a></li>
-                <li><a href="#">Valores Carnevale</a></li>                                                
-              </ul>
-            </div>
-          </li>
-          <li class="menu__button"><a href="contacto.html">Cont&aacute;ctenos</a></li>
-          <li class="menu__button menu__button--arrow format"><img src="./images/userLogo.png" style="height: 1.5rem; margin-right: 0.5rem;">Mi Cuenta
-            <div class="dropdown-container forma">
-              <ul>
-                <li>
-                  <form action="" id="log">
-                    <p>Inicia sesi&oacute;n</p>
-                    <br><input type="email" name="user" placeholder="correo@hotmail.com" required><br>
-                    <br><input type="password" min="5" name="contraseña" placeholder="contraseña"><br>
-                    <br><input type="submit" value="Enviar" id="submit"><br>
-                    <br><p>¿No tienes cuenta?</p>
-                    <p><a href="registro.html">Reg&iacute;strate</a></p><br>
-                </li>
-              </ul>
-            </div>
+
+<header>
+  <nav class="principal">
+    <button id="menu-icon"><img src="images/menu.png" style="width: 2rem"></button>
+    <nav>
+      <ul class="menu menu--background">
+        <li><a href="index.html"><img src="./images/carnevaleLogo.jpg" id="logo"></a></li>
+        <li class="menu__button inicio"><a href="index.html">Home</a></li>
+        <li class="menu__button menu__button--arrow">Nuestros Productos<i class="fa fa-caret-down"></i>
+          <div class="dropdown-container but">
+            <ul>
+              <li><a href="#">L&iacute;nea Institucional</a></li>
+              <li><a href="#">Seguridad Industrial</a></li>
+              <li><a href="#">Ferreter&iacute;a</a></li>
+              <li><a href="#">Servicios Carnevale</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__button menu__button--arrow">Nosotros<i class="fa fa-caret-down"></i>
+          <div class="dropdown-container but">
+            <ul>
+              <li><a href="#">Misi&oacute;n</a></li>
+              <li><a href="#">Visi&oacute;n</a></li>
+              <li><a href="#">Valores Carnevale</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__button menu__button--arrow contact" style="color: rgb(27, 31, 85);"><a href="contacto.html">Cont&aacute;ctenos</a>
+        </li>
+        <li class="menu__button menu__button--arrow format"><img src="./images/userLogo.png"
+            style="height: 1.5rem; margin-right: 0.5rem;">Mi Cuenta
+          <div class="dropdown-container forma">
+            <ul>
+              <li>
+                <form action="" id="log">
+                  <p>Inicia sesi&oacute;n</p>
+                  <br><input type="email" name="user" placeholder="correo@hotmail.com" required><br>
+                  <br><input type="password" min="5" name="contraseña" placeholder="contraseña"><br>
+                  <br><input type="submit" value="Enviar" id="submit"><br>
+                  <br>
+                  <p>¿No tienes cuenta?</p>
+                  <p><a href="registro.html">Reg&iacute;strate</a></p><br>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__button menu__button--arrow res-user"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><p id="carrito"></p></a></li>
+      </ul>
+    </nav>
+    <li class="imgLog"><a href="index.html"><img src="images/carnevaleLogo.jpg" style="height: 2rem;"></a></li>
+    <li class="menu__button menu__button--arrow res-user" style="text-align: center;justify-content: center;"><img
+        src="./images/userLogo.png" style="height: 1.5rem; margin-right: 0.5rem;">Mi Cuenta
+      <div class="dropdown-container formamin">
+        <ul>
+          <li>
+            <form action="" id="log">
+              <br>
+              <p>Inicia sesi&oacute;n</p>
+              <input type="email" name="user" placeholder="correo@hotmail.com" required><br>
+              <br><input type="password" min="5" name="contraseña" placeholder="contraseña"><br>
+              <br><button type="submit" value="Enviar" class="submit-log">Enviar</button><br>
+              <p>¿No tienes cuenta?</p>
+              <p><a href="registro.html">Reg&iacute;strate</a></p><br>
           </li>
         </ul>
-      </nav>
-      <li class="imgLog"><a href="index.html"><img src="images/carnevaleLogo.jpg" style="height: 2rem;"></a></li>
-      <li class="menu__button menu__button--arrow res-user" style="text-align: center;justify-content: center; color:blue"><img src="./images/userLogo.png" style="height: 1.5rem; margin-right: 0.5rem;">Mi Cuenta
-        
-      </li>
+      </div>
+      <a href="#" class="res-user-car"></a><i class="fa fa-shopping-cart" aria-hidden="true"></i><p id="carrito"></p></a>
+    </li>
   </nav>
-  </header>
-  <div class="title">
-    <!-- <h1><br>El carrito de compras que te ayuda a crecer</h1> -->
-  </div>
+</header>
+
+<body>
   <section class="user">
     <div class="form_wrapper">
       <div class="form_container">
@@ -127,78 +154,51 @@
       </div>
     </div>
   </section>
-
-<!-- 
-</body>
-</html>
-            <form method="GET" action="action.php">
-                Nombre: <input type ="text" name="nombre">
-                Apellido: <input type="text" name="apellido">
-                Fecha de nacimiento: <input type="date" name="nacimiento">
-                Género: <br>
-                <input type="radio" name="genero" value="masculino">Masculino<br>
-                <input type="radio" name="genero" value="femenino">Femenino<br>
-                <input type="radio" name="genero" value="otro">Otro<br>
-                Ciudad de residencia: <br>
-                <select>
-                    <option value="bello" name="ciudad" value="bello">Bello</option>
-                    <option value="copacabana" name="ciudad" value="copacabana">Copacabana</option>
-                    <option value="envigado" name="ciudad" value="envigado">Envidago</option>
-                    <option value="estrella" name="ciudad" value="estrella">La Estrella</option>
-                    <option value="medellin" name="ciudad" value="medellin">Medellin</option>
-                    <option value="sabaneta" name="ciudad" value="sabaneta">Sabaneta</option>
-                </select>
-        
-                Correo electr&oacute;nico: <input type="email" name="carousel-control-next-icon" required>
-                Contraseña: <input type="password" min="5" name="contraseña">
-                <input type="submit" value="¡Registrarse!"">
-                <input type="reset" value="Borrar todo">
-        
-            </form>
-            
-            </div>
-    </section>
-
-     -->
 </body>
 <!--FOOTER-->
 <footer>
   <div class="top_header">
-  <section>
-  <span><i class="fa fa-map-marker"></i></span>
-  <span>Dirección, Medell&iacute;n/Antioquia, Colombia</span>
-  </section>
-  <section>
-  <span><i class="fa fa-phone"></i></span>
-  <span>(+57) 123 45 67</span>
-  </section>
-  <section>
-  <span><i class="fa fa-envelope"></i></span>
-  <span>carnevale@correo.com</span>
-  </section>
+    <section>
+      <span><i class="fa fa-map-marker"></i></span>
+      <span>Dirección, Medell&iacute;n/Antioquia, Colombia</span>
+    </section>
+    <section>
+      <span><i class="fa fa-phone"></i></span>
+      <span>(+57) 123 45 67</span>
+    </section>
+    <section>
+      <span><i class="fa fa-envelope"></i></span>
+      <span>carnevale@correo.com</span>
+    </section>
   </div>
   <span class="border-shape"></span>
   <div class="bottom_content">
-  <section>
-  <a href="#"><i class="fa fa-facebook"></i></a>
-  <a href="#"><i class="fa fa-instagram"></i></a>
-  <a href="#"><i class="fa fa-twitter"></i></a>
-  <a href="#"><i class="fa fa-telegram"></i></a>
-  </section>
-  <section>
-  <a href="index.html">Home</a>
-  <a href="#">Nuestros Productos</a>
-  <a href="#">Nosotros</a>
-  <a href="#">Cont&aacute;ctenos</a>
-  </section>
+    <section>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-telegram"></i></a>
+    </section>
+    <section>
+      <a href="index.html">Home</a>
+      <a href="#">Nuestros Productos</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Cont&aacute;ctenos</a>
+    </section>
   </div>
   <div class="copyright">
-  Copyright © 2022 Carnevale - All rights reserved 
+    Copyright © 2022 Carnevale - All rights reserved
   </div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="script.js"></script>
-</html>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+  integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js'></script>
+<!-- <script  src="./script.js"></script> -->
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>
